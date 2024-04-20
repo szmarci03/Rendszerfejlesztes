@@ -41,6 +41,7 @@ namespace Raktar
                 termeklista.Add(t);
             }
             Szures();
+            Mennyiseg();
 
         }
 
@@ -79,21 +80,15 @@ namespace Raktar
             Szures();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Mennyiseg()
         {
-
-
-        }
-
-        private void Keszlet()
-        {
-            //Termek termek = (Termek)listBox1.SelectedItem;
-            //textBoxmennyiseg.Text = termek.keszlet.ToString();
+            int kivalasztott = listBox1.SelectedIndex;
+            textBoxmennyiseg.Text = termeklista[kivalasztott].keszlet.ToString();
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Keszlet();
+            Mennyiseg();
         }
     }
 }
