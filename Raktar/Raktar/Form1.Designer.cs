@@ -36,6 +36,7 @@
             this.buttondelete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxmennyiseg = new System.Windows.Forms.TextBox();
+            this.textBoxPR = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // listBox1
@@ -64,6 +65,7 @@
             this.buttonsave.TabIndex = 2;
             this.buttonsave.Text = "Mentés";
             this.buttonsave.UseVisualStyleBackColor = true;
+            this.buttonsave.Click += new System.EventHandler(this.buttonsave_Click);
             // 
             // buttonmegse
             // 
@@ -110,11 +112,19 @@
             this.textBoxmennyiseg.Size = new System.Drawing.Size(100, 31);
             this.textBoxmennyiseg.TabIndex = 7;
             // 
+            // textBoxPR
+            // 
+            this.textBoxPR.Location = new System.Drawing.Point(814, 131);
+            this.textBoxPR.Name = "textBoxPR";
+            this.textBoxPR.Size = new System.Drawing.Size(100, 31);
+            this.textBoxPR.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1425, 799);
+            this.Controls.Add(this.textBoxPR);
             this.Controls.Add(this.textBoxmennyiseg);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttondelete);
@@ -140,6 +150,7 @@
         private System.Windows.Forms.Button buttondelete;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxmennyiseg;
+        private System.Windows.Forms.TextBox textBoxPR;
     }
 }
 

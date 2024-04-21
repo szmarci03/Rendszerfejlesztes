@@ -90,5 +90,16 @@ namespace Raktar
         {
             Mennyiseg();
         }
+
+        private void buttonsave_Click(object sender, EventArgs e)
+        {
+            var proxy = new Api("http://20.234.113.211:8108/", "1-99771c47-c036-4a99-aaf9-79ea0f752b3e");
+            var index = listBox1.SelectedIndex;
+            var curproduct = termeklista[index];
+            //textBoxPR.Text = curproduct.keszlet.ToString();
+            var inv = proxy.ProductInventoryFind(curproduct.inventory_id).Content;
+            inv.QuantityOnHand = int.Parse(textBoxmennyiseg.Text);
+            proxy.ProductInventoryUpdate(inv);
+        }
     }
 }
